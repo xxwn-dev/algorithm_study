@@ -9,8 +9,8 @@ class Solution {
         }
 
         for(int i = 0; i < n; i++) {
-            expandAroudCenter(s, i, i);//aba
-            expandAroudCenter(s, i, i+1);//
+            expandAroudCenter(s, i, i);//홀수 길이 회문(중심: i)
+            expandAroudCenter(s, i, i+1);//짝수 길이 회문(중심 i와 i+1 사이)
         }
         return s.substring(start, start + maxLength);
     }
@@ -26,3 +26,7 @@ class Solution {
         }
     }
 }
+/*
+시간 복잡도: 각 문자를 중심으로 최대 O(n)의 확장이 이루어질 수 있으며, 문자열의 길이는 n이므로 전체 시간 복잡도는 O(n^2)
+공간 복잡도: 상수 개의 변수만을 사용하므로 공간 복잡도는 O(1)입니다.
+*/
