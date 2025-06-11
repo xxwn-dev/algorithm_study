@@ -1,5 +1,8 @@
 class Solution {
     public int maxProfit(int[] prices) {
+         if (prices == null || prices.length <= 1) {
+            return 0;
+        }
         //투포인터
         //가장 낮은 구매 가격을 찾으면서 동시에 그 이후의 가장 높은 판매 가격을 찾아야 한다.
         //두번째 포인터가 배열 끝에 올 필요가 xx
